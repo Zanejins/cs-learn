@@ -23,7 +23,7 @@ int main() {
     double c2 = refcube(lens[2]);
     double c3 = refcube(rd);
     double c4 = refcube(*pd);
-    double c5 = refcube(edge);  //实参的类型不正确，但是可以转化成正确的类型，因此，临时变量ra
+    double c5 = refcube(edge);  //实参W的类型不正确，但是可以转化成正确的类型，因此，临时变量ra
     double c6 = refcube(7.0);   //实参的类型正确，但是不是左值，因此，临时变量
     double c7 = refcube(side + 10.0);  //实参的类型正确，但是不是左值，因此，临时变量
 }
@@ -33,6 +33,6 @@ double cube(double a) {
     return a;
 }
 
-double refcube(const double &ra) {
+double refcube(const double &ra) { //注意只有这里是常量引用时，才会创建临时变量，如果不是，则必须是左值作为实参
     return ra * ra * ra;
 }
