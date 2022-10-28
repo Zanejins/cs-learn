@@ -4,7 +4,10 @@ template<typename T>
 void ShowArray(T arr[], int n); //template A: 作为参数传递的数组是包含了要演示的数据
 
 template<typename T>
-void ShowArray(T* arr[],int n); //template B: 数据元素为指针
+void ShowArray(T* arr[],int n); //template B: 数据元素为指针 B 
+//B is more specialized
+//what is more specialized?
+// "A is more specialized than B" means "A accepts a subset of the types that B
 
 struct debts {
     char name[50];
