@@ -37,3 +37,4 @@ void strcount(const char * str) {
     cout<<count<<" characters\n";
     cout<<total<<" characters total\n";
 }
+
