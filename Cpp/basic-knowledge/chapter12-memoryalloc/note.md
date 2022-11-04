@@ -25,4 +25,17 @@
         std::strcpy(str,st.str);
         return *this;
     }
-6. 
+
+
+## 使用new初始化对象
+通常，如果Class_name是类，value的类型为Type_name, 则下面的语句：
+Class_name *pclass = new Class_name(value);
+
+将调用如下构造函数Class_name(Type_name)，这里可能会有一些琐碎的转换
+
+## 在下列情况下析构函数将被调用
+1. 如果对象是动态变量，则当执行完定义该对象的程序块时，将调用该对象的析构函数。
+2. 如果对象是静态变量，则在程序结束时将调用对象的析构函数。
+3. 如果对象是用new创建的，则仅当您显式使用delete删除对象时，其析构函数才会被调用。
+
+
